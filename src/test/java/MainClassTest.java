@@ -1,9 +1,11 @@
+
+import lombok.extern.slf4j.Slf4j;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.Test;
 import ru.softwareTesting.mobile.MainClass;
 
-
+@Slf4j
 public class MainClassTest {
 
     MainClass Main = new MainClass();
@@ -22,11 +24,12 @@ public class MainClassTest {
 
     @Test
     public void testGetClassNumber(){
-
-        if (Main.getClassNumber() > 45){
+        int actualNumber = Main.getClassNumber();
+        if (actualNumber > 45){
+            log.info("testGetClassNumber: The actual number = {} is greater than 45.", actualNumber);
+        } else {
+            log.error("testGetClassNumber: The actual number = {} is less than 45.", actualNumber);
         }
-
-
     }
 
 
