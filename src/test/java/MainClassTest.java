@@ -27,7 +27,6 @@ public class MainClassTest {
         int actualNumber = Main.getClassNumber();
         if (actualNumber > 45){
             log.info("testGetClassNumber: The actual number = {} is greater than 45.", actualNumber);
-            MatcherAssert.assertThat("The actual number is greater than 45.", true);
         } else {
             log.error("testGetClassNumber: The actual number = {} is less than 45.", actualNumber);
             MatcherAssert.assertThat("The actual number is less than 45.", false);
