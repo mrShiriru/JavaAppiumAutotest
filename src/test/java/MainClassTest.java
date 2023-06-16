@@ -16,7 +16,7 @@ public class MainClassTest {
         int actualNumber = Main.getLocalNumber();
 
         MatcherAssert.assertThat(
-                String.format("Error in comparing two values. Expected value = %s , actual value = %s",
+                String.format("Error in comparing two values. Expected value = %d , actual value = %d",
                         expectedNumber, actualNumber),
                 actualNumber,
                 Matchers.is(expectedNumber));
@@ -37,6 +37,14 @@ public class MainClassTest {
     @Test
     public void testGetClassString(){
         String actualText = Main.getClassString();
+
+        String expectedSub1 = "hello";
+        String expectedSub2 = "Hello";
+
+        boolean result = actualText.contains(expectedSub1) || actualText.contains(expectedSub2) ;
+        MatcherAssert.assertThat(String.format("The actual line does not contain the desired text, such as:%s, %s",
+                        expectedSub1, expectedSub2),
+               result, Matchers.is(true));
     }
 
 }
