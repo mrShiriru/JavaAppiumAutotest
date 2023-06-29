@@ -2,7 +2,7 @@
 import lombok.extern.slf4j.Slf4j;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import ru.softwareTesting.mobile.MainClass;
 
 @Slf4j
